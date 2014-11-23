@@ -1,0 +1,24 @@
+
+
+@font-face {
+  font-family: 'Lily Script One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lily Script One'), local('LilyScriptOne-Regular'), url('fonts/LilyScriptOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Didact Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Didact Gothic'), local('DidactGothic'), url('fonts/DidactGothic.ttf') format('truetype');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+
+.font1 {
+     font-family: 'Lily Script One';
+}
+
+.font2 {
+     font-family: 'Didact Gothic';
+}

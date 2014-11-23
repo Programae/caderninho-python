@@ -1,0 +1,605 @@
+<html>
+<!DOCTYPE html>
+<html>
+   <head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="Programaê">
+   <meta name="author" content="Tiago Maluta">
+   <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/sticky-footer.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="css/codemirror.css">
+   <link rel="stylesheet" href="css/caderninho.css">
+
+   <script src="js/codemirror.js"></script>
+   <script src="js/python.js"></script>
+   <script src="js/css.js"></script>
+   <style type="text/css">
+      /* Custom Styles */
+      ul.nav-tabs{
+          width: 140px;
+          margin-top: 20px;
+          border-radius: 4px;
+          border: 1px solid #ddd;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+      }
+      ul.nav-tabs li{
+          margin: 0;
+          border-top: 1px solid #ddd;
+      }
+      ul.nav-tabs li:first-child{
+          border-top: none;
+      }
+      ul.nav-tabs li a{
+          margin: 0;
+          padding: 8px 16px;
+          border-radius: 0;
+      }
+      ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+          color: #fff;
+          background: #0088cc;
+          border: 1px solid #0088cc;
+      }
+      ul.nav-tabs li:first-child a{
+          border-radius: 4px 4px 0 0;
+      }
+      ul.nav-tabs li:last-child a{
+          border-radius: 0 0 4px 4px;
+      }
+      ul.nav-tabs.affix{
+          top: 30px; /* Set the top position of pinned element */
+      }
+
+      .CodeMirror {
+        border: 1px solid #eee;
+      }
+      .CodeMirror-scroll {
+        height: auto;
+        overflow-y: hidden;
+        overflow-x: auto;
+        width: 100%;
+      }
+    </style>
+
+   <title>Meu caderninho Python...</title>
+
+   </head>
+
+<body>
+
+
+  <div class="container">
+  <div class="page-header">
+  <h1 class="font1">Meu caderninho...</h1>
+  </div>
+  <div>
+  <div class="row">
+        <div class="col-xs-3" id="myScrollspy">
+            <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                <li class="font2" class="active"><a href="dicas.html">Dicas</a></li>
+                <li class="font2"><a href="exercicios.html">Exercícios</a></li>
+                <li class="font2"><a href="anota.html">Anotações</a></li>
+                <li class="font2"><a href="index.html">Início</a></li>
+                <li><img alt="http://programae.org.br" src='img/programae_laranja_128x128.png' border=0px></img></li>
+            </ul>
+
+        </div>
+        <div class="col-xs-9">
+
+      <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="font2" style="font-size: 20px;">>>> Dicas Python</h3>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Imprimir um texto <kbd>print()</kbd>
+                        </div>
+                        <div class="panel-body">
+                            <textarea id="dica1" name="dica1">
+print("+--------------+")
+print("| uma linha    |")
+print("+--------------+")
+                          </textarea>
+                    </div>
+                 </div>
+               </div>
+            </div>
+            <!-- -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Ler um valor <kbd>input()</kbd>
+                        </div>
+                        <div class="panel-body">
+                          <textarea id="dica2" name="dica2">
+nome = input("Qual seu nome? ")
+                          </textarea>
+
+                    </div>
+                 </div>
+               </div>
+            </div>
+            <!-- -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Comentários
+                        </div>
+                        <div class="panel-body">
+                        <textarea id="dica3" name="dica3">
+# isto é um comentário de uma linha
+
+"""
+isto é um comentários
+de mais de uma
+liha
+"""
+                        </textarea>
+                    </div>
+                 </div>
+               </div>
+            </div>
+            <!-- -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Conversão de dados
+                        </div>
+                        <div class="panel-body">
+                            <p>Conversão de texto para números</p>
+                            <textarea id="dica4" name="dica4">
+valor = "10"
+valor_inteiro = int(valor)
+
+outro_valor = "3.5"
+valor_fracionario = float(outro_valor)
+                      </textarea>
+                      <p>Conversão de números para texto</p>
+                      <textarea id="dica5" name="dica5">
+conta = 10 + 5
+texto = str(conta)
+print(texto)
+                </textarea>
+                      <p>Exemplo prático:</p>
+                      <textarea id="dica6" name="dica6">
+idade = input("Qual a sua idade?")
+ano_nasc = 2014 - int(idade)
+print("Você nasceu no ano " + str(ano_nasc))
+
+</textarea>
+                    </div>
+                 </div>
+               </div>
+            </div>
+            <!-- -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Condicional <kbd>if/else</kbd>
+                        </div>
+                        <div class="panel-body">
+                            <p></p>
+                            <textarea id="dica7" name="dica7">
+a = 10
+b = 20
+if a >= b:
+    # caso True (verdadeiro)
+else:
+    # caso False (falso)
+                            </textarea>
+                    </div>
+                 </div>
+               </div>
+            </div>
+            <!-- -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Números aleatórios <kbd>random()</kbd>
+                        </div>
+                        <div class="panel-body">
+                            <p>Sortear um número: randint</p>
+                            <textarea id="dica8" name="dica8">
+import random
+# sorteia um número entre 1 e 59
+random.randint(1,59)
+                            </textarea>
+                            <p>Escolher um número de uma lista: choice</p>
+                            <textarea id="dica9" name="dica9">
+import random
+frutas = ["maça", "pêra", "laranja", "abacaxi", "melão"]
+random.choice(frutas)
+
+                            </textarea>
+                    </div>
+                 </div>
+               </div>
+            </div>
+            <!-- -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Caracteres especiais
+                        </div>
+                        <div class="panel-body">
+                            <p>Podemos trabalhar além das letras & números:</p>
+                            <textarea id="dica10" name="dica10">
+print("☺ ♥ ★ ☆ ♡")
+print("✺ ✻ ✼ ❄ ❅")
+print("✆ ✉ ☎ ☏")
+                            </textarea>
+                            <p>Podemos pegar o código do símbolo:</p>
+                            <textarea id="dica11" name="dica11">
+coração = "♥"
+código_coração = ord(coração)
+                            </textarea>
+                            <p>E também transformr um código em símbolo:</p>
+                            <textarea id="dica12" name="dica12">
+código = 9829
+símbolo = chr(códio)
+print(símbolo)
+                            </textarea>
+                    </div>
+                 </div>
+               </div>
+            </div>
+            <!-- -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Laços & repetições <kbd>for</kbd>
+                        </div>
+                        <div class="panel-body">
+                            <p>Podemos usar o comando for para contar sequências númerias:</p>
+                            <textarea id="dica13" name="dica13">
+# conta irá valer: 0,1,2,3,4,5,6,7,8,9
+for conta in range(10):
+    print(conta)
+
+# conta irá valer: 5,6,7,8,9,10
+for conta in range(5,11):
+    print(conta)
+
+# conta irá valer: 0,2,4,6,8
+for conta in range(0,10,2):
+    print(conta)
+                           </textarea>
+                           <p>Podemos usar o for para percorrer uma lista:</p>
+                           <textarea id="dica14" name="dica14">
+frutas = ["maça", "pêra", "laranja", "abacaxi", "melão"]
+for fruta in frutas:
+    print("Listando a fruta: " + frutas)
+
+                          </textarea>
+                    </div>
+                 </div>
+               </div>
+            </div>
+            <!-- -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Definindo funções <kbd>def</kbd>
+                        </div>
+                        <div class="panel-body">
+                            <p>Temos três tipos de modelo de função</p>
+                            <p>Sem parâmetros e sem retorno de valor.</p>
+                            <textarea id="dica15" name="dica15">
+def título():
+    print("Seja bem-vindo ao ")
+
+#invocando a função
+titulo()
+                           </textarea>
+                           <p>Com parâmetros mas sem retorno de valor.</p>
+                           <textarea id="dica16" name="dica16">
+def boas_vindas(nome, idade):
+   print("Seja bem-vindo" + nome)
+   print("Sua idade é " + str(idade))
+
+#invocando a função
+boas_vindas("Pedro", 15)
+
+
+                          </textarea>
+                          <p>Com parâmetros e com retorno de valor.</p>
+                          <textarea id="dica17" name="dica17">
+def ano_nascimento(idade):
+   ano_nasc = 2014 - int(idade)
+   return ano_nasc
+
+#invocando a função
+ano = ano_nascimento(15)
+print("Você nasceu no ano " + str(ano)
+                         </textarea>
+                    </div>
+                 </div>
+               </div>
+            </div>
+            <!-- -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Comparaçoes
+                        </div>
+                        <div class="panel-body">
+                            <p>As comparaçoes pode ser <b>aritméticas</b>. Estas retorna Verdadeiro (<i>True</i>) ou Falso (<i>False</i>).</p>
+                            <textarea id="dica18" name="dica18">
+a = 10
+b = 5
+
+print(a > b)
+print(a < b)
+print(a >= b)
+print(a <= b)
+print(a == b)
+                            </textarea>
+                            <p>As comparações podem ser <b>lógicas</b>.</p>
+                            <textarea id="dica19" name="dica19">
+a = True
+b = False
+
+print(a and b) #False
+print(a or b) #True
+print(not a) #False
+print(not b) #True
+                            </textarea>
+                            <p>As comparações pode ser com <b>textos</b>.</p>
+                            <textarea id="dica20" name="dica20">
+opção = input("Você está certo (S/N)")
+if opção == "s" or opção == "S":
+    print("você escolheu sim")
+elif opção == "n" or opção == "N":
+    print("você escolheu não")
+                            </textarea>
+                    </div>
+                 </div>
+               </div>
+            </div>
+            <!-- -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Estruturas de dados
+                        </div>
+                        <div class="panel-body">
+                            <p><b>Lista</b></p>
+                            <textarea id="dica21" name="dica21">
+# criando uma lista vazia
+lista = []
+
+# adicionando um itens a lista: .append()
+lista.append("carro") # ["carro"]
+lista.append("moto") # ["carro","moto"]
+
+# adicionando um itens a lista: +
+lista = lista + ["ônibus"]
+
+# verificando o tamanho da lista: len()
+tamanho = len(lista)
+
+#pegando um único item da lista: []
+print(lista[0]) # primeiro item da lista
+print(lista[1]) # segundo item da lista
+
+# imprimindo uma lista
+print(list)
+
+#invertendo os items da lista
+lista.reverse()
+
+#ordendando os items em ordem crescente
+lista.sort()
+
+#ordendando os items em ordem decrescente
+lista.sort(reverse=True)
+
+#limpando uma lista
+l.clear()
+
+#removendo o último item da lista
+lista.pop()
+                        </textarea>
+                        <p><b>Dicionário</b></p>
+                        <textarea id="dica22" name="dica22">
+# definidindo um dicionário
+dicionario = {}
+
+# adiconando valor
+dicionario = {'chave':'valor'}
+d['chave'] = 'valor'
+
+# exemplos
+dicionario['carro'] = "Veículo de quatro rodas acionado por um motor de explosão."
+dicionario['moto'] = "Veículo de duas rodas acionado por um motor da explosão."
+dicionario['bicicleta'] = "Velocípede de duas rodas, de igual diâmetro, sendo a da retaguarda accionada por um sistema de pedais que actua sobre uma corrente."
+
+# valor
+print(dicionario['carro'])
+
+# atualizando um valor
+dicionario.update({'bicicleta':'igual a motdo só que acionado por uma pessoa.'})
+
+# chaves do dicionario
+print( dicionario.keys() )
+
+# values do dicionario
+print( dicionario.values() )
+
+# um uso prático (exemplo)
+for k in dicionario.keys():
+    print(k + ':' +dicionario[k])
+                        </textarea>
+                    </div>
+                 </div>
+               </div>
+            </div>
+            <!-- -->
+<!--            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Imprimir um texto <kbd>print()</kbd>
+                        </div>
+                        <div class="panel-body">
+                            <p>aaaaa</p>
+                    </div>
+                 </div>
+               </div>
+            </div>
+            -->
+
+</div>
+
+
+
+
+
+<!-- scripts -->
+<script>
+
+  var lista = ["dica1", "dica2", "dica5", "dica5", "dica5"];
+
+  // TODO: deve ter um jeito mais inteligência de fazer isso...
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica1"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica2"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica3"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica4"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica5"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica6"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica7"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica8"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica9"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica10"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica11"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica12"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica13"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica14"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica15"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica16"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica17"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica18"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica19"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica20"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica21"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica22"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
