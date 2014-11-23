@@ -83,10 +83,10 @@
   <div class="row">
         <div class="col-xs-3" id="myScrollspy">
             <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
-                <li class="font2" class="active"><a href="dicas.html">Dicas</a></li>
-                <li class="font2"><a href="exercicios.html">Exercícios</a></li>
-                <li class="font2"><a href="anota.html">Anotações</a></li>
-                <li class="font2"><a href="index.html">Início</a></li>
+                <li class="font3 active"><a href="dicas.html">Dicas</a></li>
+                <li class="font3"><a href="exercicios.html">Exercícios</a></li>
+                <li class="font3"><a href="anota.html">Anotações</a></li>
+                <li class="font3"><a href="index.html">Início</a></li>
                 <li><img alt="http://programae.org.br" src='img/programae_laranja_128x128.png' border=0px></img></li>
             </ul>
 
@@ -96,7 +96,17 @@
       <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="font2" style="font-size: 20px;">>>> Dicas Python</h3>
+                    <h3 class="font3" style="font-size: 20px;">>>> Dicas Python</h3>
+
+                    <p class="font1">Como usar?</p>
+
+                    <ul class="font3">
+                    <li>Clique no trecho que você quer testar</li>
+                    <li>Selecione (<kbd>ctrl + a</kbd>) e copie (<kbd>ctrl + c</kbd>)</li>
+                    <li>No editor de códigos do IDLE, cole o texto copiado
+                    <li>Execute o programa (<kbd>F5</kbd>)</li>
+                    <ul>
+
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -104,10 +114,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-info">
-                        <div class="panel-heading">
+                        <div class="font3 panel-heading">
                             Imprimir um texto <kbd>print()</kbd>
                         </div>
-                        <div class="panel-body">
+                        <div class="font3 panel-body">
                             <textarea id="dica1" name="dica1">
 print("+--------------+")
 print("| uma linha    |")
@@ -121,10 +131,10 @@ print("+--------------+")
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-info">
-                        <div class="panel-heading">
+                        <div class="font3 panel-heading">
                             Ler um valor <kbd>input()</kbd>
                         </div>
-                        <div class="panel-body">
+                        <div class="font3 panel-body">
                           <textarea id="dica2" name="dica2">
 nome = input("Qual seu nome? ")
                           </textarea>
@@ -137,10 +147,10 @@ nome = input("Qual seu nome? ")
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-info">
-                        <div class="panel-heading">
+                        <div class="font3 panel-heading">
                             Comentários
                         </div>
-                        <div class="panel-body">
+                        <div class="font3 panel-body">
                         <textarea id="dica3" name="dica3">
 # isto é um comentário de uma linha
 
@@ -158,10 +168,10 @@ liha
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-info">
-                        <div class="panel-heading">
+                        <div class="font3 panel-heading">
                             Conversão de dados
                         </div>
-                        <div class="panel-body">
+                        <div class="font3 panel-body">
                             <p>Conversão de texto para números</p>
                             <textarea id="dica4" name="dica4">
 valor = "10"
@@ -191,10 +201,10 @@ print("Você nasceu no ano " + str(ano_nasc))
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-info">
-                        <div class="panel-heading">
+                        <div class="font3 panel-heading">
                             Condicional <kbd>if/else</kbd>
                         </div>
-                        <div class="panel-body">
+                        <div class="font3 panel-body">
                             <p></p>
                             <textarea id="dica7" name="dica7">
 a = 10
@@ -212,10 +222,10 @@ else:
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-info">
-                        <div class="panel-heading">
+                        <div class="font3 panel-heading">
                             Números aleatórios <kbd>random()</kbd>
                         </div>
-                        <div class="panel-body">
+                        <div class="font3 panel-body">
                             <p>Sortear um número: randint</p>
                             <textarea id="dica8" name="dica8">
 import random
@@ -237,10 +247,10 @@ random.choice(frutas)
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-info">
-                        <div class="panel-heading">
+                        <div class="font3 panel-heading">
                             Caracteres especiais
                         </div>
-                        <div class="panel-body">
+                        <div class="font3 panel-body">
                             <p>Podemos trabalhar além das letras & números:</p>
                             <textarea id="dica10" name="dica10">
 print("☺ ♥ ★ ☆ ♡")
@@ -266,10 +276,10 @@ print(símbolo)
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-info">
-                        <div class="panel-heading">
+                        <div class="font3 panel-heading">
                             Laços & repetições <kbd>for</kbd>
                         </div>
-                        <div class="panel-body">
+                        <div class="font3 panel-body">
                             <p>Podemos usar o comando for para contar sequências númerias:</p>
                             <textarea id="dica13" name="dica13">
 # conta irá valer: 0,1,2,3,4,5,6,7,8,9
@@ -299,10 +309,10 @@ for fruta in frutas:
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-info">
-                        <div class="panel-heading">
+                        <div class="font3 panel-heading">
                             Definindo funções <kbd>def</kbd>
                         </div>
-                        <div class="panel-body">
+                        <div class="font3 panel-body">
                             <p>Temos três tipos de modelo de função</p>
                             <p>Sem parâmetros e sem retorno de valor.</p>
                             <textarea id="dica15" name="dica15">
@@ -341,10 +351,10 @@ print("Você nasceu no ano " + str(ano)
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-info">
-                        <div class="panel-heading">
+                        <div class="font3 panel-heading">
                             Comparaçoes
                         </div>
-                        <div class="panel-body">
+                        <div class="font3 panel-body">
                             <p>As comparaçoes pode ser <b>aritméticas</b>. Estas retorna Verdadeiro (<i>True</i>) ou Falso (<i>False</i>).</p>
                             <textarea id="dica18" name="dica18">
 a = 10
@@ -382,10 +392,10 @@ elif opção == "n" or opção == "N":
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-info">
-                        <div class="panel-heading">
+                        <div class="font3 panel-heading">
                             Estruturas de dados
                         </div>
-                        <div class="panel-body">
+                        <div class="font3 panel-body">
                             <p><b>Lista</b></p>
                             <textarea id="dica21" name="dica21">
 # criando uma lista vazia
@@ -461,10 +471,10 @@ for k in dicionario.keys():
 <!--            <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-info">
-                        <div class="panel-heading">
+                        <div class="font3 panel-heading">
                             Imprimir um texto <kbd>print()</kbd>
                         </div>
-                        <div class="panel-body">
+                        <div class="font3 panel-body">
                             <p>aaaaa</p>
                     </div>
                  </div>
