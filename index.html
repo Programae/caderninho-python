@@ -94,7 +94,12 @@
               <div class="row">
                   <div class="col-lg-12">
                       <img src="img/intro.jpg" />
-                      <p class="font3" align="center">Esta página foi feita para também ser executada <i>offline</i></p>
+                      <p></p>
+                      <br>
+                      <br>
+                      <br>
+                      <p class="font3" align="center" style="font-size: 12px;">Esta página foi feita para ser executada <i>offline</i>.</p>
+                      <p align="center"><button type="button" class="font1 btn btn-info btn" data-toggle="modal" data-target="#myModal">Como?</button></p>
                       <!--<p class="font2" style="font-size: 20px;">Este espaço é <b>seu</b>.</p>
                       <p class="font2" style="font-size: 20px;" align="justify">No <i>caderninho Python</i> você irá encontrar o material necessário para trabalhar nas aulas de Python do Programaê.</p>
                       <p class="font2" style="font-size: 20px;" align="justify">Poderá acessar os exemplos e exercícios do professor.</p> -->
@@ -102,6 +107,34 @@
                   <!-- /.col-lg-12 -->
               </div>
           </div>
+
+   <!-- Modal -->
+    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="font1 modal-title" id="myModalLabel">Modo offline</h4>
+          </div>
+          <div class="font3 modal-body">
+
+              <ol>
+              <li>Pré-requisito: <a href="https://www.python.org/downloads/">Python 3.4.x</a> instalado.</li>
+              <li>Faça o download da <a href="https://github.com/Programae/caderninho-python/archive/master.zip">caderninho</a>.</li>
+              <li>Descompacte o arquivo zip e execute(*) o arquivo <kbd>caderninho.py</kbd></li>
+              <li>Aguarde alguns instantes que o navegador (browser) irá carregar a página.</li>
+              </ul>
+              <br>
+
+              <p style="font-size: 12px;">(*) Windows: <code>duplo clique</code> no arquivo caderninho.<br>    Linux: execute no console <code>python3 caderninho.py</code></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="font3 btn btn-default" data-dismiss="modal">Ok</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
 
 
         </div>

@@ -118,7 +118,7 @@ preface = '''
 
 suffix = '''
             </div>
-    
+
 
             <script src="js/jquery.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
@@ -186,6 +186,9 @@ try:
 except:
     print("*** VERIFIQUE SUA CONEXÃO COM A INTERNET ***")
     ip = socket.gethostbyname(socket.gethostname())
+'''
+
+ip="localhost"
 
 print("Compartilhe o seguinte endereço:")
 print("+---------------------------+")
@@ -203,4 +206,3 @@ except:
     print("OOPS... aconteceu algum erro na inicialização!")
     print("Verifique com a equipe do Programaê!")
     print("http://programae.org.br")
-'''
