@@ -1,224 +1,290 @@
-<html>
-<!DOCTYPE html>
-<html>
-   <head>
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="description" content="Programaê">
-   <meta name="author" content="Tiago Maluta">
-   <!-- <link rel="icon" href="../../favicon.ico"> -->
 
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+            <!DOCTYPE html>
+            <html>
+               <head>
+               <meta charset="utf-8">
+               <meta http-equiv="X-UA-Compatible" content="IE=edge">
+               <meta name="viewport" content="width=device-width, initial-scale=1">
+               <meta name="description" content="Programaê">
+               <meta name="author" content="Tiago Maluta">
+               <!-- <link rel="icon" href="../../favicon.ico"> -->
 
-  <!-- Custom styles for this template -->
-  <link href="css/sticky-footer.css" rel="stylesheet">
+              <!-- Bootstrap core CSS -->
+              <link href="css/bootstrap.min.css" rel="stylesheet">
 
-   <link rel="stylesheet" href="css/codemirror.css">
-   <link rel="stylesheet" href="css/caderninho.css">
+              <!-- Custom styles for this template -->
+              <link href="css/sticky-footer.css" rel="stylesheet">
 
-   <script src="js/codemirror.js"></script>
-   <script src="js/python.js"></script>
-   <script src="js/css.js"></script>
-   <style type="text/css">
-      /* Custom Styles */
-      ul.nav-tabs{
-          width: 140px;
-          margin-top: 20px;
-          border-radius: 4px;
-          border: 1px solid #ddd;
-          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
-      }
-      ul.nav-tabs li{
-          margin: 0;
-          border-top: 1px solid #ddd;
-      }
-      ul.nav-tabs li:first-child{
-          border-top: none;
-      }
-      ul.nav-tabs li a{
-          margin: 0;
-          padding: 8px 16px;
-          border-radius: 0;
-      }
-      ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
-          color: #fff;
-          background: #0088cc;
-          border: 1px solid #0088cc;
-      }
-      ul.nav-tabs li:first-child a{
-          border-radius: 4px 4px 0 0;
-      }
-      ul.nav-tabs li:last-child a{
-          border-radius: 0 0 4px 4px;
-      }
-      ul.nav-tabs.affix{
-          top: 30px; /* Set the top position of pinned element */
-      }
+               <link rel="stylesheet" href="css/codemirror.css">
+               <link rel="stylesheet" href="css/caderninho.css">
 
-      .CodeMirror {
-        border: 1px solid #eee;
-      }
-      .CodeMirror-scroll {
-        height: auto;
-        overflow-y: hidden;
-        overflow-x: auto;
-        width: 100%;
-      }
-    </style>
+               <script src="js/codemirror.js"></script>
+               <script src="js/python.js"></script>
+               <script src="js/css.js"></script>
+               <style type="text/css">
+                  /* Custom Styles */
+                  ul.nav-tabs{
+                      width: 140px;
+                      margin-top: 20px;
+                      border-radius: 4px;
+                      border: 1px solid #ddd;
+                      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+                  }
+                  ul.nav-tabs li{
+                      margin: 0;
+                      border-top: 1px solid #ddd;
+                  }
+                  ul.nav-tabs li:first-child{
+                      border-top: none;
+                  }
+                  ul.nav-tabs li a{
+                      margin: 0;
+                      padding: 8px 16px;
+                      border-radius: 0;
+                  }
+                  ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+                      color: #fff;
+                      background: #0088cc;
+                      border: 1px solid #0088cc;
+                  }
+                  ul.nav-tabs li:first-child a{
+                      border-radius: 4px 4px 0 0;
+                  }
+                  ul.nav-tabs li:last-child a{
+                      border-radius: 0 0 4px 4px;
+                  }
+                  ul.nav-tabs.affix{
+                      top: 30px; /* Set the top position of pinned element */
+                  }
 
-   <title>Meu caderninho...</title>
+                  .CodeMirror {
+                    border: 1px solid #eee;
+                  }
+                  .CodeMirror-scroll {
+                    height: auto;
+                    overflow-y: hidden;
+                    overflow-x: auto;
+                    width: 100%;
+                  }
+                </style>
 
-   </head>
+               <title>Meu caderninho...</title>
 
-<body>
+               </head>
 
-
-  <div class="container">
-  <div class="page-header">
-  <h1 class="font1">Meu caderninho...</h1>
-  </div>
-  <div>
-  <div class="row">
-        <div class="col-xs-3" id="myScrollspy">
-            <ul class="font3 nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
-                <li><a href="dicas.html">Dicas</a></li>
-                <li class="active"><a href="exercicios.html">Exercícios</a></li>
-                <li><a href="anota.html">Anotações</a></li>
-                <li><a href="index.html">Início</a></li>
-                <li><img alt="http://programae.org.br" src='img/programae_laranja_128x128.png' border=0px></img></li>
-            </ul>
-
-        </div>
-        <div class="col-xs-9">
-            <h2 id="section-1"></h2>
+            <body>
 
 
- <div class="font3  panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <!-- -->
-  <div class="panel panel-default">
-  <div class="panel-heading" role="tab" id="heading_Aula1">
-  <h4 class="panel-title">
-    <a data-toggle="collapse" data-parent="#accordion" href="#collapse_Aula1" aria-expanded="false" aria-controls="collapse_Aula1">
-      Dicas
-    </a>
-  </h4>
-  </div>
-  <div id="collapse_Aula1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_Aula1">
-  <div class="panel-body">
-<!--  <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal1">
-    outro.py
-  </button>
+              <div class="container">
+              <div class="page-header">
+              <h1 class="font1">Meu caderninho...</h1>
+              </div>
+              <div>
+              <div class="row">
+                    <div class="col-xs-3" id="myScrollspy">
+                        <ul class="font3 nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                            <li><a href="dicas.html">Dicas</a></li>
+                            <li class="active"><a href="exercicios.html">Exercícios</a></li>
+                            <li><a href="anota.html">Anotações</a></li>
+                            <li><a href="index.html">Início</a></li>
+                            <li><img alt="http://programae.org.br" src='img/programae_laranja_128x128.png' border=0px></img></li>
+                        </ul>
 
-  <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
+                    </div>
+                    <div class="col-xs-9">
+                        <h2 id="section-1"></h2>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <!-- -->
+            <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading_Aula1">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse_Aula1" aria-expanded="false" aria-controls="collapse_Aula1">
+                Aula1
+              </a>
+            </h4>
+            </div>
+            <div id="collapse_Aula1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_Aula1">
+            <div class="panel-body"><ul class="list-group"><li class="list-group-item"><a href="CODIGOS/Aula1/aula1-dinamica.py">aula1-dinamica.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula1/aula1-turtle1.py">aula1-turtle1.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula1/aula1-turtle2.py">aula1-turtle2.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula1/aula1-turtle3.py">aula1-turtle3.py</a></li></ul>
+             </div>
+             </div>
+             </div>
+             <!-- -->
+            <!-- -->
+            <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading_Aula2">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse_Aula2" aria-expanded="false" aria-controls="collapse_Aula2">
+                Aula2
+              </a>
+            </h4>
+            </div>
+            <div id="collapse_Aula2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_Aula2">
+            <div class="panel-body"><ul class="list-group"><li class="list-group-item"><a href="CODIGOS/Aula2/aula2-ex1_papel_quadriculado.py">aula2-ex1_papel_quadriculado.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula2/aula2-ex2_papel_quadriculado.py">aula2-ex2_papel_quadriculado.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula2/aula2-ex3_papel_quadriculado.py">aula2-ex3_papel_quadriculado.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula2/aula2-ex4_papel_quadriculado.py">aula2-ex4_papel_quadriculado.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula2/aula2-exemplo1.py">aula2-exemplo1.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula2/aula2-exemplo2.py">aula2-exemplo2.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula2/aula2-plano1.py">aula2-plano1.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula2/aula2-turtle1.py">aula2-turtle1.py</a></li></ul>
+             </div>
+             </div>
+             </div>
+             <!-- -->
+            <!-- -->
+            <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading_Aula3">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse_Aula3" aria-expanded="false" aria-controls="collapse_Aula3">
+                Aula3
+              </a>
+            </h4>
+            </div>
+            <div id="collapse_Aula3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_Aula3">
+            <div class="panel-body"><ul class="list-group"><li class="list-group-item"><a href="CODIGOS/Aula3/aula3-ex1.py">aula3-ex1.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula3/aula3-exemplo1.py">aula3-exemplo1.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula3/aula3-exemplo2-certo.py">aula3-exemplo2-certo.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula3/aula3-exemplo2-errado.py">aula3-exemplo2-errado.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula3/aula3-exemplo3-variavel.py">aula3-exemplo3-variavel.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula3/aula3-exemplo4-tipos.py">aula3-exemplo4-tipos.py</a></li></ul>
+             </div>
+             </div>
+             </div>
+             <!-- -->
+            <!-- -->
+            <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading_Aula4">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse_Aula4" aria-expanded="false" aria-controls="collapse_Aula4">
+                Aula4
+              </a>
+            </h4>
+            </div>
+            <div id="collapse_Aula4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_Aula4">
+            <div class="panel-body"><ul class="list-group"><li class="list-group-item"><a href="CODIGOS/Aula4/aula4-alfabeto-com-funções.py">aula4-alfabeto-com-funções.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula4/aula4-alfabeto.py">aula4-alfabeto.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula4/aula4-comentários.py">aula4-comentários.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula4/aula4-desenhos-utf8.py">aula4-desenhos-utf8.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula4/aula4-entrevista.py">aula4-entrevista.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula4/aula4-exemplo1.py">aula4-exemplo1.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula4/aula4-letras.py">aula4-letras.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula4/aula4-palavra.py">aula4-palavra.py</a></li><li class="list-group-item"><a href="CODIGOS/Aula4/aula4-simbolos.py">aula4-simbolos.py</a></li></ul>
+             </div>
+             </div>
+             </div>
+             <!-- -->
+            <!-- -->
+            <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading_Aula5">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse_Aula5" aria-expanded="false" aria-controls="collapse_Aula5">
+                Aula5
+              </a>
+            </h4>
+            </div>
+            <div id="collapse_Aula5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_Aula5">
+            <div class="panel-body"><ul class="list-group"></ul>
+             </div>
+             </div>
+             </div>
+             <!-- -->
+            <!-- -->
+            <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading_Aula6">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse_Aula6" aria-expanded="false" aria-controls="collapse_Aula6">
+                Aula6
+              </a>
+            </h4>
+            </div>
+            <div id="collapse_Aula6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_Aula6">
+            <div class="panel-body"><ul class="list-group"></ul>
+             </div>
+             </div>
+             </div>
+             <!-- -->
+            <!-- -->
+            <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading_Aula7">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse_Aula7" aria-expanded="false" aria-controls="collapse_Aula7">
+                Aula7
+              </a>
+            </h4>
+            </div>
+            <div id="collapse_Aula7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_Aula7">
+            <div class="panel-body"><ul class="list-group"></ul>
+             </div>
+             </div>
+             </div>
+             <!-- -->
+            <!-- -->
+            <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading_Aula8">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse_Aula8" aria-expanded="false" aria-controls="collapse_Aula8">
+                Aula8
+              </a>
+            </h4>
+            </div>
+            <div id="collapse_Aula8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_Aula8">
+            <div class="panel-body"><ul class="list-group"></ul>
+             </div>
+             </div>
+             </div>
+             <!-- -->
+            <!-- -->
+            <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading_Aula9">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse_Aula9" aria-expanded="false" aria-controls="collapse_Aula9">
+                Aula9
+              </a>
+            </h4>
+            </div>
+            <div id="collapse_Aula9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_Aula9">
+            <div class="panel-body"><ul class="list-group"></ul>
+             </div>
+             </div>
+             </div>
+             <!-- -->
+            <!-- -->
+            <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading_Aula10-14">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse_Aula10-14" aria-expanded="false" aria-controls="collapse_Aula10-14">
+                Aula10-14
+              </a>
+            </h4>
+            </div>
+            <div id="collapse_Aula10-14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_Aula10-14">
+            <div class="panel-body"><ul class="list-group"></ul>
+             </div>
+             </div>
+             </div>
+             <!-- -->
+            <!-- -->
+            <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading_Aula15">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse_Aula15" aria-expanded="false" aria-controls="collapse_Aula15">
+                Aula15
+              </a>
+            </h4>
+            </div>
+            <div id="collapse_Aula15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_Aula15">
+            <div class="panel-body"><ul class="list-group"></ul>
+             </div>
+             </div>
+             </div>
+             <!-- -->
+            <!-- -->
+            <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading_Aula16">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse_Aula16" aria-expanded="false" aria-controls="collapse_Aula16">
+                Aula16
+              </a>
+            </h4>
+            </div>
+            <div id="collapse_Aula16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_Aula16">
+            <div class="panel-body"><ul class="list-group"></ul>
+             </div>
+             </div>
+             </div>
+             <!-- -->    </div>
+            </div>
+            <div class="footer">
+            <div class="container">
+              <p class="text-muted">http://www.programae.org.br</p>
+            </div>
+            </div>
 
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="myModalLabel">Código</h4>
-        </div>
-        <div class="modal-body">
+            <script src="js/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
 
-          <textarea id="ex1">
-print("olá")
-for i in range(10):
-  print(i)
-        </textarea>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div> !-- modal -->
-</div> <!-- panel-body -->
-</div> <!-- Content -->
-</div> <!-- item -->
+            </body>
+            </html>
 
-   <!-- -->
-<div class="panel panel-default">
-   <div class="panel-heading" role="tab" id="heading_exercicios">
-     <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse_exercicios" aria-expanded="false" aria-controls="collapse_exercicios">
-          Exercícios
-        </a>
-    </h4>
-   </div>
-   <div id="collapse_exercicios" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_exercicios">
-   <div class="panel-body">
-   asdfasdfasdf
-
-   </div>
-  </div>
-</div>
-
-  <!-- -->
-  <div class="panel panel-default">
-  <div class="panel-heading" role="tab" id="heading_Aula2">
-  <h4 class="panel-title">
-    <a data-toggle="collapse" data-parent="#accordion" href="#collapse_Aula2" aria-expanded="false" aria-controls="collapse_Aula2">
-      Meus códigos
-    </a>
-  </h4>
-  </div>
-  <div id="collapse_Aula2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_Aula2">
-  <div class="panel-body">
-TBA
- </div> <!-- collapse -->
-   </div> <!-- -->
- </div> <!-- panel group -->
-</div>
-
-<!-- scripts -->
-<script>
-  var editor = CodeMirror.fromTextArea(document.getElementById("ex1"), {
-    mode: { name:"python", version:3, singleLineStringErrors: false },
-    lineNumbers: true,
-    indentUnit: 4,
-    matchBrackets: true
-  });
-</script>
-
-<script>
-  var editor = CodeMirror.fromTextArea(document.getElementById("ex2"), {
-    mode: { name:"python", version:3, singleLineStringErrors: false },
-    lineNumbers: true,
-    indentUnit: 4,
-    matchBrackets: true
-  });
-</script>
-
-<script>
-  var editor = CodeMirror.fromTextArea(document.getElementById("ex3"), {
-    mode: { name:"python", version:3, singleLineStringErrors: false },
-    lineNumbers: true,
-    indentUnit: 4,
-    matchBrackets: true
-  });
-</script>
-
-
-<script>
-  var editor = CodeMirror.fromTextArea(document.getElementById("ex4"), {
-    mode: { name:"python", version:3, singleLineStringErrors: false },
-    lineNumbers: true,
-    indentUnit: 4,
-    matchBrackets: true
-  });
-</script>
-
-<script>
-  var editor = CodeMirror.fromTextArea(document.getElementById("ex5"), {
-    mode: { name:"python", version:3  },
-    viewportMargin: Infinity
-  });
-</script>
-
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
-</body>
-</html>
+        

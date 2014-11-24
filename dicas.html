@@ -96,7 +96,7 @@
       <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="font3" style="font-size: 20px;">>>> Dicas Python</h3>
+                    <h3 class="font3" style="font-size: 20px;">>>> "Dicas Python"</h3>
 
                     <p class="font1">Como usar?</p>
 
@@ -109,6 +109,40 @@
 
                 </div>
                 <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="font3 panel-heading">
+                            Desenhos com a tartaruga <kbd>turtle</kbd>
+                        </div>
+                        <div class="font3 panel-body">
+                            <textarea id="dica0" name="dica0">
+from turtle import *
+
+# define o "desenhista"
+tartaruga = Turtle()
+tartaruga.shape("turtle")
+
+# regras
+tartaruga.avance = tartaruga.forward
+tartaruga.recue = tartaruga.backward
+tartaruga.direita = tartaruga.right
+tartaruga.esquerda = tartaruga.left
+
+# movimentando
+tartaruga.avance(100)
+tartaruga.esquerda(90)
+tartaruga.avance(100)
+tartaruga.esquerda(90)
+tartaruga.avance(100)
+tartaruga.esquerda(90)
+tartaruga.avance(100)
+                          </textarea>
+                    </div>
+                 </div>
+               </div>
             </div>
             <!-- /.row -->
             <div class="row">
@@ -494,6 +528,12 @@ for k in dicionario.keys():
   var lista = ["dica1", "dica2", "dica5", "dica5", "dica5"];
 
   // TODO: deve ter um jeito mais inteligência de fazer isso...
+
+  var editor = CodeMirror.fromTextArea(document.getElementById("dica0"), {
+    mode: { name:"python", version:3  },
+    lineNumbers: true
+  });
+
   var editor = CodeMirror.fromTextArea(document.getElementById("dica1"), {
     mode: { name:"python", version:3  },
     lineNumbers: true
