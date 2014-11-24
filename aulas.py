@@ -118,11 +118,7 @@ preface = '''
 
 suffix = '''
             </div>
-            <div class="footer">
-            <div class="container">
-              <p class="text-muted">http://www.programae.org.br</p>
-            </div>
-            </div>
+    
 
             <script src="js/jquery.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
