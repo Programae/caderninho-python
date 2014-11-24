@@ -140,7 +140,7 @@ for i in lessons:
     os.chdir("../../")
 
 pyfiles_len.reverse()
-html += '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">'
+html += '<div class="font3 panel-group" id="accordion" role="tablist" aria-multiselectable="true">'
 
 for files in zip(lessons,pyfiles):
     s_m = '<ul class="list-group">'
