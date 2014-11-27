@@ -149,7 +149,7 @@ for files in zip(lessons,pyfiles):
         if "resposta" in f:
             pass
         else:
-            s_m += '<li class="list-group-item"><a href="{2}/{1}/{0}">{0}</a></li>'.format(f,files[0],root)
+            s_m += '<li class="list-group-item"><a href="{2}/{1}/{0}"  data-toggle="tooltip" data-placement="right" title="Salve e abra este código no IDLE.">{0}</a></li>'.format(f,files[0],root)
     s_i = '''
             <!-- -->
             <div class="panel panel-default">
